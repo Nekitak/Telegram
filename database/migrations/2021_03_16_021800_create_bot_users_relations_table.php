@@ -16,7 +16,7 @@ class CreateBotUsersRelationsTable extends Migration
         Schema::create('bot_users_relations', function (Blueprint $table) {
             $table->id();
             $table->integer("telegram_chat_id");
-            $table->integer("bot_id")->unique();
+            $table->integer("bot_id");
             $table->integer("phone");
             $table->timestamps();
         });
