@@ -18,31 +18,21 @@ Route::get('/', function () {
     return view('welcome');
 });
  
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+  
 Route::get('/admin', [App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('admin');
 
 
 Route::match(['post', 'get'], 'register', function(){ 
     return redirect('/');
 })->name('register');
-  
+
+ 
+
 Route::middleware(['auth'])->prefix('admin')->namespace('App\Http\Controllers\Backend')->name('admin.')->group( function(){
     Route::get('/', 'DashboardController@index')->name('index'); 
 
     Route::get('/dashboard/configurator', 'DashboardController@configurator')->name('dashboard.configurator');
 });
+
+
+Auth::routes();

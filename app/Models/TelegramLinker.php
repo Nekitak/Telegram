@@ -37,3 +37,4 @@ class TelegramLinker extends Model
         return true;
     }
   
+}

@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\app\\Http\\Controllers\\Backend"
+  ],
+  "SelectedNode": "\\app\\Http\\Controllers\\Backend\\DashboardController.php",
+  "PreviewInSolutionExplorer": false
+}

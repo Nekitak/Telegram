@@ -88,4 +88,5 @@ class BotInteractor extends Model
  
         return true;
     }
+ 
 }
