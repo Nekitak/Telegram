@@ -42,7 +42,7 @@ Route::match(['post', 'get'], 'register', function(){
 })->name('register');
   
 Route::middleware(['auth'])->prefix('admin')->namespace('App\Http\Controllers\Backend')->name('admin.')->group( function(){
-    Route::get('/', 'DashboardController@index')->name('index');
- 
- 
+    Route::get('/', 'DashboardController@index')->name('index'); 
+
+    Route::get('/dashboard/configurator', 'DashboardController@configurator')->name('dashboard.configurator');
 });
